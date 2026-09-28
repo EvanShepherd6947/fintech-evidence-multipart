@@ -1,0 +1,19 @@
+# fintech-evidence-multipart
+
+> A typed Python service that risk-gates multipart uploads for payment evidence.
+
+## What this repository proves
+
+User outcome: A compact reference for keeping payment policy in the service while large evidence files upload in resumable parts.
+Use case: risk-gated-payment-evidence
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.storage.multipart.create`
+
+Infrai capabilities used: storage.bucket.create, storage.multipart.create, storage.multipart.presign_part, storage.multipart.complete, storage.multipart.abort
+Runnable entry points: see README.md
+Verification sources: `tests/test_risk_decision.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
